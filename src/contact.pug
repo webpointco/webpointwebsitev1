@@ -1,17 +1,14 @@
 extends templates/page.pug
 
-block styles
-  link(rel='stylesheet', href='/styles/main.scss')
-
 block prepend header
   - const page = "Portfolio";
 
 block content
-  section.hero.is-link.is-fullheight-with-navbar.has-background.mobile-o
+  section.hero.is-fullheight-with-navbar.has-background
     img.hero-background.desktop-o(src='/images/contact-background.svg')
     .hero-body
       .container.has-text-centered
-        h1.title.is-1.is-size-2-mobile.has-text-weight-bold.mb-6 Get in Touch.
+        h1.title.is-1.is-size-2-mobile.has-text-weight-bold.mb-6.has-text-white Get in Touch.
         .columns.is-centered
           .column.box.is-half.has-background-lightgray.px-5.py-4.mx-4
             form.has-text-left
@@ -30,8 +27,8 @@ block content
               .field.is-grouped
                 .control.has-text-centered.is-expanded
                   button.button.is-link.is-center.is-size-6.is-size-5-mobile.c-form.px-5.py-1 Send Message
-        .c-form.is-size-5.mt-5
+        .c-form.is-size-5.mt-5.has-text-white
           span Interested in becoming a member? 
           br.mobile-o
           span
-            a.has-text-weight-bold Click Here
+            a.has-text-weight-bold.has-text-accent Click Here
