@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+// Set your brand colors
+$black: #000;
+$white: #FFF;
+$dark: #3E3E3E;
+$very-light: #EFF3FB;
+$blue: #73A6FF;
+
+// Update Bulma's global variables
+$family-sans-serif: "Montserrat", sans-serif;
+$grey-dark: $dark;
+$grey-light: $white;
+$primary: $dark;
+$link: $blue;
+
+$navbar-height: 4rem;
+$navbar-item-img-max-height: 3rem;
+$navbar-item-hover-color: $blue;
+
+img.logo {
+  width: 12rem;
+  height: 3rem;
+}
+
+a.item::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  height: 40px;
+  width: 100%;
+  border-bottom: solid 3px #73A6FF;
+
+  -webkit-transform: scaleX(0.0001);
+  -ms-transform: scaleX(0.0001);
+  transform: scaleX(0.0001);
+
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+}
+
+a.item:hover::after {
+  -webkit-transform: scaleX(0.7);
+  -ms-transform: scaleX(0.7);
+  transform: scaleX(0.7);
+}
+
+//contact form
+/* for the contact page*/
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 769px) {
+  .desktop-o {
+    display: none;
+  }
+  .hero.is-link.is-fullheight-with-navbar.has-background.mobile-o {
+    display: block;
+    background-color: #3E3E3E;
+  }
+  .mobile-o {
+    display: block;
+  }
+  
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-o {
+  display: none;
+}
+}
+.gradbord:focus {
+  border-bottom: 4px solid;
+  border-image-source: linear-gradient(45deg, #18FF97, #2033FF);
+  border-image-slice: 0 0 10% 0;
+  border-radius: 5px;
+}
+
+.no-out:focus {
+  outline: none;
+}
+
+.is-small.input.rad4, .is-small.textarea.rad4 {
+  border-radius: 4px;
+}
+
+.button.is-link.is-center.c-form {
+  background-color: #1D6DE1;
+  border-radius: 10px;
+}
+
+.c-form a{
+  color: #18FF97;
+
+}
+
+.c-form a:hover {
+  color: #18FF97;
+  text-decoration: underline;
+}
+
+$box-shadow: 0px 0px 10px 5px #1f1f1f;
+$box-background-color: #282828;
+$input-background-color: #191919;
+$input-border-color: #282828;
+$input-shadow: inset 0px 0px 7px 4px #121212;
+$input-hover-border-color: #282828;
+$input-color: #FFF;
+$input-focus-border-color: #282828;
+$input-focus-box-shadow-size: 0;
+$label-weight: 400px;
+$input-radius: 4px;
+
+// Import only what you need from Bulma
+/*
+@import "../vendors/bulma/sass/utilities/_all.sass";
+@import "../vendors/bulma/sass/base/_all.sass";
+@import "../vendors/bulma/sass/elements/button.sass";
+@import "../vendors/bulma/sass/elements/container.sass";
+@import "../vendors/bulma/sass/elements/title.sass";
+@import "../vendors/bulma/sass/form/_all.sass";
+@import "../vendors/bulma/sass/components/navbar.sass";
+@import "../vendors/bulma/sass/layout/hero.sass";
+@import "../vendors/bulma/sass/layout/section.sass";
+*/
+//@import '../vendors/bulma/bulma.sass';
+
+@import "~node_modules/bulma/bulma.sass"

@@ -1,16 +1,85 @@
-extends templates/basicPage.pug
+extends templates/page.pug
+
+block styles
+  link(rel='stylesheet', href='/styles/about-us.sass')
+  link(rel='stylesheet', href='/styles/font-awesome.min.css')
 
 block prepend header
   - const page = "About Us";
+          
+block content
+  .about-us
+    section.hero
+    .hero-body
+      .container
+        p.about-subtitle About Us
+        figure.about-line
+          img(src='images/CoolColorUnderline.svg')
 
-block append styles
-  style.
-    #thisShouldReallyBeInAnotherFile {
-      display: none; /* No worries, it never will be used anyway */
-    }
+      .container.about-us-text
+        p.p Webpoint is a volunteer organization that delivers local businesses #[strong.au professional websites] and provides students #[strong.au practical experience] in web development.
+        p.p With #[strong.au over 15 high school volunteers], we are all seeking #[strong.au to make an impact] on our community by harnessing our passions for computer science. 
+        p.p #[strong.au We can’t wait to work with you!]
 
-block append content
-  section.section
-    .container
-      p.
-        We are really boring people. Nothing interesting to see here.
+  .why-choose-us
+    section.hero
+    .hero-body
+      .container
+        p.about-subtitle Why Choose Us?
+        figure.about-line
+          img(src='images/CoolColorUnderline.svg')
+
+      p.p 
+      
+      .container.about-us-text
+        .columns
+          .column
+            figure.wcu-image
+              img(src='images/check-square-solid.png')
+            p.p We create #[strong.au Sleek], #[strong.au Functional], and #[strong.au Mobile Friendly] websites
+          .column
+            figure.wcu-image
+              img(src='images/chalkboard-teacher-solid.png')
+            p.p We give high school students #[strong practical experience] in web development. 
+          .column
+            figure.wcu-image
+              img(src='images/hand-holding-usd-solid.png')
+            p.p You already have enough to pay for, we develop your site #[strong free of charge]. 
+  
+  .our-team
+    section.hero
+    .hero-body
+      .container
+        p.our-team-subtitle Our Team
+        figure.about-line
+          img(src='images/CoolColorUnderline.svg')
+
+      p.p 
+      
+      .container.our-team-text
+        p.p Our team is comprised of #[strong.ot over 15 high school students], who are all passionate about supporting the community. 
+        p.p We split our organization into two sections, #[strong.ot designers] and #[strong.ot programmers]. 
+        p.p #[strong.ot Each of these sections work together to deliver you as amazing of a product as possible! ]
+
+      p.meet-the-founders Meet The Founders
+
+      .container.our-team-text
+        .columns
+          .column
+            //empty space
+          .column.is-two-fifths
+            figure.founder-image
+              img(src='images/BenPic.svg', alt='Picture of Ben DiMarco')
+            p.founder-name Ben DiMarco
+            p.founder-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at quam quis nulla pretium egestas nec facilisis.
+          .column.is-two-fifths
+            figure.founder-image
+              img(src='images/KeshavPic.svg', alt='Picture of Keshav Ganapathy')
+            p.founder-name Keshav Ganapathy
+            p.founder-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at quam quis nulla pretium egestas nec facilisis.
+          .column
+            //empty space
+
+      //button
+      .button-container
+        a.btn.btn-1 Our Members

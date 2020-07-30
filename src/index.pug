@@ -1,21 +1,26 @@
 extends templates/page.pug
 
-block prepend header
-  - const page = "Home";
+block styles
+  link(rel='stylesheet', href='/styles/index.sass')
+
+block header
 
 block content
-  //section.hero.is-fullheight-with-navbar 
-    This is a Pug block buffered comment. It comments out the children too (including this text); it will be in the final HTML.
-  section.hero.is-medium.reverse-order
-    .container
-      .hero-body
-        .columns.is-vcentered.reverse-order
-          .column
-            h1.title.is-1.mb-6 Writing a slogan one word at a time
-            h3.subtitle.mb-6 We don't know what to put here, so here's a placeholder.
-            .has-text-centered
-              a.button.is-primary(href='/about-us.pug') About Us
-          .column
-            figure.image.is-4x5
-              img(src='/images/logo.png', alt='Big Logo')
-      .hero-footer
+  section.hero.is-link.is-fullheight
+        .hero-head
+          - const page = "Home";
+          include templates/indexHeader.pug
+        .hero-body
+          .container
+            .columns.reverse-order
+              .column
+                .container1
+                  p.big-text Lorem ipsum dolor sit amet, consectetur
+                  p.smol-text Lorem ipsum dolor sit amet, consectetur
+                  .button-container
+                    a.button.is-large(href='/about-us.pug') More About Us
+              .column 
+                figure
+                  img(src='images/LaptopDesign-WebpointHomepage.svg')
+
+block footer
