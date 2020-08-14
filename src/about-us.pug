@@ -7,43 +7,43 @@ block prepend header
   - const page = "About Us";
           
 block content
-  section.hero.is-light
+  section.hero.is-light.is-medium
     .hero-body
-      .container
-        h1.title.is-1.has-text-black About Us
+      .container.pb-5
+        h1.title.is-1.has-text-black.mb-0 About Us
         figure.about-line
           img(src='images/CoolColorUnderline.svg', alt='Underline')
 
-      .container.about-us-text
+      .container.about-us-text.has-text-weight-light
         p.p Webpoint is a volunteer organization that delivers local businesses #[strong.au professional websites] and provides students #[strong.au practical experience] in web development.
         p.p With #[strong.au over 15 high school volunteers], we are all seeking #[strong.au to make an impact] on our community by harnessing our passions for computer science. 
         p.p #[strong.au We can’t wait to work with you!]
 
-  section.hero.is-white
-  .hero-body
-    .container
-      h1.title.is-1.has-text-black Why Choose Us?
-      figure.about-line
-        img(src='images/CoolColorUnderline.svg', alt='Underline')
+  section.hero.is-white.is-medium
+    .hero-body
+      .container
+        h1.title.is-1.has-text-black Why Choose Us?
+        figure.about-line
+          img(src='images/CoolColorUnderline.svg', alt='Underline')
 
-    p.p 
+      p.p 
     
-    .container.about-us-text
-      .columns
-        .column
-          figure.wcu-image
-            img(src='images/check-square-solid.png', alt='Check')
-          p.p We create #[strong.au Sleek], #[strong.au Functional], and #[strong.au Mobile Friendly] websites
-        .column
-          figure.wcu-image
-            img(src='images/chalkboard-teacher-solid.png', alt='Teaching')
-          p.p We give high school students #[strong practical experience] in web development. 
-        .column
-          figure.wcu-image
-            img(src='images/hand-holding-usd-solid.png', alt='Money')
-          p.p You already have enough to pay for, we develop your site #[strong free of charge]. 
+      .container.about-us-text
+        .columns
+          .column
+            figure.wcu-image
+              img(src='images/check-square-solid.png', alt='Check')
+            p.p We create #[strong.au Sleek], #[strong.au Functional], and #[strong.au Mobile Friendly] websites
+          .column
+            figure.wcu-image
+              img(src='images/chalkboard-teacher-solid.png', alt='Teaching')
+            p.p We give high school students #[strong practical experience] in web development. 
+          .column
+            figure.wcu-image
+              img(src='images/hand-holding-usd-solid.png', alt='Money')
+            p.p You already have enough to pay for, we develop your site #[strong free of charge]. 
   
-  section.hero.is-dark
+  section.hero.is-dark.is-medium
     .hero-body
       .container
         h1.title.is-1.has-text-white Our Team
@@ -76,5 +76,5 @@ block content
             //empty space
 
       //button
-      .button-container
+      //- .button-container
         a.btn.btn-1 Our Members

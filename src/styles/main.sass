@@ -49,10 +49,18 @@ $input-focus-box-shadow-size: 0
 $label-weight: 400px
 $input-radius: 4px
 
+$hero-body-padding-medium: 5rem 1.5rem
+
 @font-face
   font-family: 'Montserrat'
   src: url('/fonts/Montserrat-Regular.ttf')
   font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Montserrat'
+  src: url('/fonts/Montserrat-Light.ttf')
+  font-weight: 300
   font-style: normal
 
 @font-face
@@ -68,7 +76,7 @@ $input-radius: 4px
   font-style: normal
 
 @font-face
-  font-family: 'Montserrat '
+  font-family: 'Montserrat'
   src: url('/fonts/Montserrat-Bold.ttf')
   font-weight: Bold
   font-style: normal
@@ -141,7 +149,7 @@ img.logo
   width: 12rem
   height: 3rem
 
-a.navbar-item:not(.is-active)::after
+.navbar-menu > a.navbar-item:not(.is-active)::after
   position: absolute
   left: 0
   content: ''
@@ -224,6 +232,35 @@ a.navbar-item:hover:not(.is-active)::after
 
 /* End button copyright */
 
+#firstGradient
+  background: linear-gradient(#FFF08C, #FF9112)
+
+#secondGradient
+  background: linear-gradient(#96D3FF, #F394FF)
+
+#firstButton
+  background-color: #FFB35D
+  border-color: #FFB35D
+
+#secondButton
+  background-color: #8E80FF
+  border-color: #8E80FF
+  letter-spacing: 0.16em
+
+.uniqueTextColor
+  color: #FFE8C9
+
+#photoAdjust
+  display: block
+  margin: 0 auto
+
+@media screen and (max-width: 768px)
+  #photoAdjust
+    width: 80%
+
+@media screen and (min-width: 768px)
+  #photoAdjust
+    width: 37%
 
 //navbar is open
 @media only screen and (min-width: $navbar-breakpoint)
@@ -252,6 +289,9 @@ a.navbar-item:hover:not(.is-active)::after
 
   .mobile-o
     display: block
+
+  body
+    background: url("/images/contact-background.svg")
 
 //desktop
 @media only screen and (min-width: $desktop)
