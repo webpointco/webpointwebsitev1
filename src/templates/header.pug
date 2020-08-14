@@ -5,13 +5,13 @@ nav.navbar.is-transparent(role='navigation', aria-label='main navigation', class
   .navbar-brand
     a.navbar-item(href='/')
       block title
-        img(src='/images/webpoint-cropped.png')
+        img(src='/images/webpoint-cropped.png', alt='WebPoint Logo')
         // h1.title &nbsp#{title}
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
       span(aria-hidden='true')
       span(aria-hidden='true')
       span(aria-hidden='true')
-  #navbar.navbar-menu
+  .navbar-menu#navbar
     .navbar-end
       each link in links
         - let [name, url] = link;

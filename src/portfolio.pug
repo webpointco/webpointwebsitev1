@@ -1,4 +1,13 @@
 extends templates/page.pug
+  
+block append scripts
+  script.
+    const refs = {
+      modal: {
+        open: function() { document.getElementById('modal').classList.add('is-active'); },
+        close:function() { document.getElementById('modal').classList.remove('is-active'); }
+      }
+    };
 
 block prepend header
   - const page = "Portfolio";
@@ -21,9 +30,9 @@ block content
     .hero-body
       .container
         h1.title This could be you!
-        h2.subtitle Go to our #[a(href="/contact.pug") #[strong contact page]] for more information.
+        h2.subtitle Go to our #[a(href='/contact.pug') #[strong contact page]] for more information.
 
-  #modal.modal
+  .modal#modal
     .modal-background(onclick='refs.modal.close()')
     .modal-card
       header.modal-card-head
@@ -33,4 +42,3 @@ block content
       footer.modal-card-foot
         a(target='_blank', href='http://ivegotyourbach.com/')
           button.button.is-rounded Link
-
