@@ -1,37 +1,34 @@
 extends templates/page.pug
 
-block styles
-  link(rel='stylesheet', href='/styles/main.scss')
-
 block prepend header
-  - const page = "Portfolio";
+  - const page = "Contact Us";
 
 block content
-  section.hero.is-link.is-fullheight-with-navbar.has-background.mobile-o
-    img.hero-background.desktop-o(src='/images/contact-background.svg')
+  section.hero.is-fullheight-with-navbar.has-background
+    img.hero-background.desktop-o(src='/images/contact-background.svg', alt='Background')
     .hero-body
       .container.has-text-centered
-        h1.title.is-1.is-size-2-mobile.has-text-weight-bold.mb-6 Get in Touch.
+        h1.title.is-1.is-size-2-mobile.has-text-weight-bold.mb-6.has-text-white Get in Touch.
         .columns.is-centered
           .column.box.is-half.has-background-lightgray.px-5.py-4.mx-4
-            form.has-text-left
+            form.has-text-left(method='POST', action='https://formsubmit.co/webpointexecutives@gmail.com')
               .field
                 label.label.has-text-light.is-size-5.mb-1.has-text-weight-semibold.is-size-4-mobile Full Name:
                 .control.no-out
-                  input.input.gradbord.is-small.rad4.mb-1.is-size-5-mobile(type='text')
+                  input.input.gradbord.is-small.rad4.mb-1.is-size-5-mobile(type='text', name='Name')
               .field
                 label.label.has-text-light.is-size-5.mb-1.has-text-weight-semibold.is-size-4-mobile Email Address:
                 .control
-                  input.input.gradbord.is-small.mb-1.rad4.is-size-5-mobile(type='email')
+                  input.input.gradbord.is-small.mb-1.rad4.is-size-5-mobile(type='email', name='Email')
               .field
                 label.label.has-text-light.is-size-5.is-size-4-mobile.mb-1.has-text-weight-semibold Message:
                 .control
-                  textarea.textarea.has-fixed-size.is-normal.gradbord.is-small.mb-1.rad4.is-size-5-mobile
+                  textarea.textarea.has-fixed-size.is-normal.gradbord.is-small.mb-1.rad4.is-size-5-mobile(name='Message')
               .field.is-grouped
                 .control.has-text-centered.is-expanded
-                  button.button.is-link.is-center.is-size-6.is-size-5-mobile.c-form.px-5.py-1 Send Message
-        .c-form.is-size-5.mt-5
+                  button.button.is-link.is-center.is-size-6.is-size-5-mobile.c-form.px-5.py-1(type='submit') Send Message
+        .c-form.is-size-5.mt-5.has-text-white
           span Interested in becoming a member? 
           br.mobile-o
           span
-            a.has-text-weight-bold Click Here
+            a.has-text-weight-bold.has-text-accent(href='https://forms.gle/2gYqhqr9iEvPdYXr5') Click Here

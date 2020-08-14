@@ -1,39 +1,72 @@
 extends templates/page.pug
-
-block styles
-  link(rel='stylesheet', href='/styles/main.scss')
+  
+block append scripts
+  script.
+    const refs = {
+      modal: {
+        open: function() { document.getElementById('modal').classList.add('is-active'); },
+        close:function() { document.getElementById('modal').classList.remove('is-active'); }
+      }
+    };
 
 block prepend header
   - const page = "Portfolio";
 
 block content
-  section.hero.is-medium.is-link.is-bold.has-text-centered
+  section.hero.is-small.has-text-centered.has-background-black
+    // is-link
     .hero-body
       .container
-        h1.title Portfolio
-        h2.subtitle Here's what we've been working on.
-  section.hero.is-success.is-fullheight.is-bold.has-text-centered
+        h1.title.has-text-light.is-size-1.has-text-weight-normal Portfolio
+  section.hero.is-bold.has-text-centered#firstGradient
+    // is-success
+    // is-fullheight
+    // Special: is-medium
     .hero-body
       .container
-        h1.title I've Got Your Bach
-        h2.subtitle Affordable, Reliable, Exceptional Accompaniment
-        button.button.is-rounded(onclick='refs.modal.open()') More Information
+        figure.image
+          img#photoAdjust(src='images/igyb-example.svg', alt='I\'ve Got Your Bach website screenshot')
+        h1.title.is-size-2-widescreen.is-size-3-desktop.is-size-4-tablet.is-size-5-mobile.is-spaced.uniqueTextColor.mt-6.has-text-weight-bold I've Got Your Bach
+        h2.subtitle.is-size-4-widescreen.is-size-5-desktop.is-size-6-tablet.is-size-7-mobile.normalFont.uniqueTextColor
+          p I've got your Bach is a low-cost piano accompaniment service to middle and high school students in order to make performance opportunities for students more financially viable.
         a(target='_blank', href='http://ivegotyourbach.com/')
-          button.button.is-rounded Link
-  section.hero.is-primary.is-fullheight.is-bold.has-text-centered
+          button.button.has-text-light.normalFont#firstButton Visit Site
+  section.hero.is-bold.has-text-centered#secondGradient
+    // is-primary
+    // is-smalllllllllllllllllll
     .hero-body
       .container
-        h1.title This could be you!
-        h2.subtitle Go to our #[a(href="/contact.pug") #[strong contact page]] for more information.
+        h1.title.normalFontSupreme.is-size-1-fullhd.is-size-2-desktop.is-size-3-mobile.has-text-light This could be you!
+        button.button.has-text-light.is-small.normalFont.is-size-6#secondButton(onclick='refs.modal.open()') Contact Us
+        // Originally said, "More Information"
 
-  #modal.modal
-    .modal-background(onclick='refs.modal.close()')
-    .modal-card
-      header.modal-card-head
-        p.modal-card-title I've Got Your Bach
-        button.delete(aria-label='close', onclick='refs.modal.close()')
-      section.modal-card-body Description here!
-      footer.modal-card-foot
-        a(target='_blank', href='http://ivegotyourbach.com/')
-          button.button.is-rounded Link
+  //-
+    section.hero.is-medium.is-link.is-bold.has-text-centered
+      .hero-body
+        .container
+          h1.title Portfolio
+          h2.subtitle Here's what we've been working on.
+    section.hero.is-success.is-fullheight.is-bold.has-text-centered
+      .hero-body
+        .container
+          h1.title I've Got Your Bach
+          h2.subtitle Affordable, Reliable, Exceptional Accompaniment
+          button.button.is-rounded(onclick='refs.modal.open()') More Information
+          a(target='_blank', href='http://ivegotyourbach.com/')
+            button.button.is-rounded Link
+    section.hero.is-primary.is-fullheight.is-bold.has-text-centered
+      .hero-body
+        .container
+          h1.title This could be you!
+          h2.subtitle Go to our #[a(href='/contact.pug') #[strong contact page]] for more information.
 
+    .modal#modal
+      .modal-background(onclick='refs.modal.close()')
+      .modal-card
+        header.modal-card-head
+          p.modal-card-title I've Got Your Bach
+          button.delete(aria-label='close', onclick='refs.modal.close()')
+        section.modal-card-body Description here!
+        footer.modal-card-foot
+          a(target='_blank', href='http://ivegotyourbach.com/')
+            button.button.is-rounded Link
