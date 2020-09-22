@@ -2,7 +2,10 @@ extends templates/page.pug
 
 block append styles
   link(rel='stylesheet', href='/styles/font-awesome.min.css')
-
+  script(src='https://kit.fontawesome.com/7dc3015a44.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://kit-free.fontawesome.com/releases/latest/css/free.min.css' media='all')
+  link(rel='stylesheet' href='https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css' media='all')
+  link(rel='stylesheet' href='https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css' media='all')
 block prepend header
   - const page = "About Us";
           
@@ -31,16 +34,13 @@ block content
       .container.about-us-text
         .columns
           .column
-            figure.wcu-image
-              img(src='images/check-square-solid.png', alt='Check')
+            i.fas.fa-check-square.fa-7x
             p.p We create #[strong.au Sleek], #[strong.au Functional], and #[strong.au Mobile Friendly] websites
           .column
-            figure.wcu-image
-              img(src='images/chalkboard-teacher-solid.png', alt='Teaching')
+            i.fas.fa-chalkboard-teacher.fa-7x
             p.p We give high school students #[strong practical experience] in web development. 
           .column
-            figure.wcu-image
-              img(src='images/hand-holding-usd-solid.png', alt='Money')
+            i.fas.fa-hand-holding-usd.fa-7x
             p.p You already have enough to pay for, we develop your site #[strong free of charge]. 
   
   section.hero.is-dark.is-medium
@@ -66,12 +66,12 @@ block content
             figure.founder-image
               img(src='images/BenPic.svg', alt='Picture of Ben DiMarco')
             h3.subtitle.is-3.has-text-white.has-text-centered.mt-3 Ben DiMarco
-            p.has-text-grey-light.has-text-centered Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at quam quis nulla pretium egestas nec facilisis.
+            p.has-text-grey-light.has-text-centered Hi I'm Ben! I am a senior at Centennial High School, where I am a part of my school's Model UN club, FTC Robotics Team, and Computer Science Team. In my free time, I enjoy photography, biking in my local neighborhood, watching Twitch, and listening to podcasts!
           .column.is-two-fifths
             figure.founder-image
               img(src='images/KeshavPic.svg', alt='Picture of Keshav Ganapathy')
             h3.subtitle.is-3.has-text-white.has-text-centered.mt-3 Keshav Ganapathy
-            p.has-text-grey-light.has-text-centered Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at quam quis nulla pretium egestas nec facilisis.
+            p.has-text-grey-light.has-text-centered Hi! I am a senior at Centennial High School, where I am a part of the school's tennis team, computer science club, robotics club, and multiple honor societies. Outside of school, he is a part of APL’s ASPIRE program and a tutor for TeensGive. In my free time, I compete at hackathons, plays basketball, and listens to music.
           .column
             //empty space
 
